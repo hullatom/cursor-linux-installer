@@ -62,13 +62,13 @@ After installation, you can use the `cursor` command to launch Cursor or update 
 If you encounter a warning that `~/.local/bin` is not in your PATH, you can add it by running:
 
 ```bash
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 ```
 
 or add it to your shell profile (e.g., `.bashrc`, `.zshrc`, etc.):
 
 ```bash
-echo "export PATH=\"\$HOME/.local/bin:\$PATH\"" >> ~/.bashrc
+echo "export PATH=\"\$HOME/bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 ```
 

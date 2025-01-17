@@ -17,7 +17,7 @@ function get_arch() {
 }
 
 function find_cursor_appimage() {
-    local search_dirs=("$HOME/AppImages" "$HOME/Applications" "$HOME/.local/bin")
+    local search_dirs=("$HOME/bin/AppImages" "$HOME/bin")
     for dir in "${search_dirs[@]}"; do
         local appimage=$(find "$dir" -name "cursor.appimage" -print -quit 2>/dev/null)
         if [ -n "$appimage" ]; then
@@ -29,7 +29,7 @@ function find_cursor_appimage() {
 }
 
 function get_install_dir() {
-    local search_dirs=("$HOME/AppImages" "$HOME/Applications" "$HOME/.local/bin")
+    local search_dirs=("$HOME/bin/AppImages" "$HOME/Applications" "$HOME/bin")
     for dir in "${search_dirs[@]}"; do
         if [ -d "$dir" ]; then
             echo "$dir"

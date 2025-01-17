@@ -6,7 +6,7 @@ echo "Uninstalling Cursor..."
 
 # Function to find the Cursor AppImage
 function find_cursor_appimage() {
-    local search_dirs=("$HOME/AppImages" "$HOME/Applications" "$HOME/.local/bin")
+    local search_dirs=("$HOME/bin/AppImages" "$HOME/Applications" "$HOME/bin")
     for dir in "${search_dirs[@]}"; do
         local appimage=$(find "$dir" -name "cursor.appimage" -print -quit 2>/dev/null)
         if [ -n "$appimage" ]; then
@@ -28,7 +28,7 @@ fi
 
 # Remove the cursor script from ~/.local/bin
 echo "Removing Cursor script..."
-rm -f "$HOME/.local/bin/cursor"
+rm -f "$HOME/bin/cursor"
 
 # Remove icons
 echo "Removing Cursor icons..."

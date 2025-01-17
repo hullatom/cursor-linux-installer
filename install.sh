@@ -6,7 +6,7 @@ set -e
 CURSOR_SCRIPT_URL="https://raw.githubusercontent.com/watzon/cursor-linux-installer/main/cursor.sh"
 
 # Local bin directory
-LOCAL_BIN="$HOME/.local/bin"
+LOCAL_BIN="$HOME/bin"
 
 # Create ~/.local/bin if it doesn't exist
 mkdir -p "$LOCAL_BIN"
@@ -24,7 +24,7 @@ echo "Cursor installer script has been placed in $LOCAL_BIN/cursor"
 if [[ ":$PATH:" != *":$LOCAL_BIN:"* ]]; then
     echo "Warning: $LOCAL_BIN is not in your PATH."
     echo "To add it, run this command or add it to your shell profile:"
-    echo "export PATH=\"\$HOME/.local/bin:\$PATH\""
+    echo "export PATH=\"\$HOME/bin:\$PATH\""
 fi
 
 # Run cursor --update to download and install Cursor
